@@ -1,0 +1,197 @@
+
+body {
+    /* here we use our main typeface and set it on our body tag */
+    font-family: 'Cardo', georgia, serif;
+    font-size: 18px;
+    line-height: 1.5;
+    /* here we can use this webkit tos slightly smooth the font */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* whenever we use the cardo class, we get cardo */
+.cardo {
+    font-family: 'Cardo', georgia, serif;
+}
+
+/* using the same idea as tachyons, we are creating classes that apply specific
+styles to our elements */
+
+.tenor,
+.text-block blockquote p {
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.text-block blockquote p {
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+.archivo,
+.text-block h3,
+.text-block blockquote h4 {
+    font-family: 'Archivo Black', sans-serif;
+    font-weight: normal;
+}
+
+.text-block blockquote h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.archivo-regular {
+    font-family: 'Archivo', sans-serif;
+}
+
+.hero-heading {
+    letter-spacing: 0.05em;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.text-block h3 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+}
+
+.line {
+    
+    width: 40px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 1px;
+    background-color: #1c1c1c;
+}
+
+/* here we overwrite the inline styles on our image
+ so that it scales nicely on the page. */
+.gallery-image img {
+
+    width: auto !important;
+    height: auto !important;
+    display: block;
+}
+
+.caption {
+    max-width: 870px ;
+}
+
+.container {
+    max-width: 1300px;
+}
+ 
+
+.explore-title {
+    margin-bottom: 48px;
+    max-width: 320px;
+}
+
+.footer-content {
+    background-color: #1c1c1c;
+}
+
+.link:focus {
+    outline: none;
+}   
+
+.gallery .gallery-image:last-of-type {
+    margin-bottom: 0;
+}
+
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    margin-top: 0;
+    margin-bottom: 42px;
+}
+
+
+/* styles for the alternating image sizes in navigation grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+}
+
+.navigation-link:nth-child(2),
+.navigation-link:nth-child(3) {
+    grid-column: span 2;
+}
+
+.navigation-link:first-child .aspect-ratio,
+.navigation-link:last-child .aspect-ratio {
+    /* this makes the aspect ratio 1x1, with tachyons */
+    padding-bottom: 100%;
+}
+
+.navigation-link:nth-child(2) .aspect-ratio,
+.navigation-link:nth-child(3) .aspect-ratio {
+    height: 100%;
+}
+
+
+/* styles for the menu overlay toggle */
+
+.menu-toggle {
+    height: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .active.menu-toggle {
+    background-image: url('../images/hamburger.svg');
+    text-indent: -999rem;
+  }
+  
+  .menu nav {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+  
+  .open {
+    transform: translateX(0);
+  }
+  
+  .menu-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .overlay-open.menu-overlay {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid black;
+}
+
+.site-content {
+    margin-top: 75px;
+}
+
+/* body.page-id-30,
+body.page-id-27,
+body.page-id-23,
+body.page-id-18,*/
+
+
